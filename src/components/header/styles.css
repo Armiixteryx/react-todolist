@@ -1,0 +1,14 @@
+header {
+    text-align: center;
+    border-bottom: 1px dotted gray;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li {
+    list-style-type: none;
+}
