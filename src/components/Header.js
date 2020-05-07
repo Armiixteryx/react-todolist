@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Title = styled.h1`
     text-align: center;
@@ -21,9 +22,9 @@ const Header = () => {
             <Title>TODOLIST</Title>
             <nav>
                 <NavList>
-                    <ListItem>INFO</ListItem>
+                    <Link to="/info"><ListItem>INFO</ListItem></Link>
                     <p>&nbsp;&nbsp;|&nbsp;&nbsp;</p>
-                    <ListItem>APP</ListItem>
+                    <Link to="/"><ListItem>APP</ListItem></Link>
                 </NavList>
             </nav>
         </header>
