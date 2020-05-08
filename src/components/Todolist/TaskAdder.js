@@ -5,7 +5,7 @@ const TaskAdder = () => {
     return (
         <div>
             <input placeholder="ENTER A TASK TO BE DONE"></input>
-            <button></button>
+            <button>ADD</button>
         </div>
     );
 }
