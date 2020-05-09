@@ -6,15 +6,12 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
 `;
 
-const testState = [
-    {id: 0, text: 'Buy milk', checked: false},
-    {id: 1, text: 'Do homework', checked: true}
-];
+const testState = [];
 
 const tasksReducer = (state, action) => {
     switch (action.type) {
         case 'ADD':
-            return state;
+            return [...state, action.newTodo];
         case 'DELETE':
             return state.filter(todo => todo.id !== action.id);
         case 'EDIT':
@@ -36,7 +33,7 @@ const tasksReducer = (state, action) => {
         default:
             return state;
     }
-}
+};
 
 const Todolist = () => {
     
@@ -44,7 +41,7 @@ const Todolist = () => {
     
     return (
         <Wrapper>
-            <TaskAdder />
+            <TaskAdder dispatch={dispatch}/>
             {tasks.map(task => <Task key={task.id} id={task.id} text={task.text} checked={task.checked} dispatch={dispatch} />)}
         </Wrapper>
     );
