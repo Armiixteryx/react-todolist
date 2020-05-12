@@ -6,7 +6,7 @@ const Title = styled.h1`
     text-align: center;
 `;
 
-const NavList = styled.ul`
+const NavContainer = styled.nav`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,13 +20,11 @@ const Header = () => {
     return (
         <header style={headerStyle}>
             <Title>TODOLIST</Title>
-            <nav>
-                <NavList>
-                    <Link to="/info"><ListItem>INFO</ListItem></Link>
-                    <p>&nbsp;&nbsp;|&nbsp;&nbsp;</p>
-                    <Link to="/"><ListItem>APP</ListItem></Link>
-                </NavList>
-            </nav>
+            <NavContainer>
+                <Link to="/info"><ListItem>INFO</ListItem></Link>
+                <p>&nbsp;&nbsp;|&nbsp;&nbsp;</p>
+                <Link to="/"><ListItem>APP</ListItem></Link>
+            </NavContainer>
         </header>
     );
 };
