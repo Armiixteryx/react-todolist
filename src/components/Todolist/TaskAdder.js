@@ -3,7 +3,8 @@ import { v4 as uuidv4 } from 'uuid';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-    background-color: #9A7F6B;
+    /*background-color: #9A7F6B;*/
+    background-color: #d4d4d4;
     display: flex;
     height: 2.25em;
 `;

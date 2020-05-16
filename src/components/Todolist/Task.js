@@ -1,4 +1,24 @@
 import React, { useState, useRef, useEffect } from 'react';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+    display: flex;
+    border-bottom: solid 1px gray;
+    height: 2.25em;
+    background-color: #fafafa;
+`;
+
+const TaskElement = styled.div`
+    background-color: transparent;
+    border: none;
+`
+
+const TaskTextBox = styled(TaskElement)`
+    flex-grow: 1; 
+`;
+
+const TaskButton = styled(TaskElement)`
+`;
 
 const Task = props => {
     // Task text
@@ -53,12 +73,12 @@ const Task = props => {
     };
     
     return (
-        <div>
+        <Wrapper>
             <input type="checkbox" checked={props.checked} onChange={handleCheck} />
-            <input value={value} onChange={onChangeHandler} disabled={editDisabled} ref={textRef} onBlur={() => handleEdit()} onKeyUp={handleKeyUp} />
-            <button id="change-task-text" onClick={editBtnHandler}>EDIT</button>
-            <button id="delete-task" onClick={handleDelete}>DELETE</button>
-        </div>
+            <TaskTextBox as="input" value={value} onChange={onChangeHandler} disabled={editDisabled} ref={textRef} onBlur={() => handleEdit()} onKeyUp={handleKeyUp} />
+            <TaskButton as="button" id="change-task-text" onClick={editBtnHandler}>EDIT</TaskButton>
+            <TaskButton as="button" id="delete-task" onClick={handleDelete}>DELETE</TaskButton>
+        </Wrapper>
     );
 }
 
