@@ -1,0 +1,11 @@
+/* Linked to ./components/Header.js */
+/* TODO: Make a deeper integration with the component */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.link-selected {
+    text-decoration: underline;
+}
+

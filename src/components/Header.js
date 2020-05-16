@@ -32,7 +32,8 @@ const Header = () => {
 
 const headerStyle = {
     //borderBottom: 'dashed',
-    backgroundColor: '#6E2C31',
+    //backgroundColor: '#6E2C31',
+    backgroundColor: '#333333',
     color: 'white',
 }
   
