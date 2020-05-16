@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import '../links-styles.css';
 
 const Title = styled.h1`
     text-align: center;
@@ -21,16 +22,18 @@ const Header = () => {
         <header style={headerStyle}>
             <Title>TODOLIST</Title>
             <NavContainer>
-                <Link to="/info"><ListItem>INFO</ListItem></Link>
+                <NavLink class="link" to="/info" activeClassName="link-selected"><ListItem>INFO</ListItem></NavLink>
                 <p>&nbsp;&nbsp;|&nbsp;&nbsp;</p>
-                <Link to="/"><ListItem>APP</ListItem></Link>
+                <NavLink exact to="/" activeClassName="link-selected"><ListItem>APP</ListItem></NavLink>
             </NavContainer>
         </header>
     );
 };
 
 const headerStyle = {
-    borderBottom: 'dashed'
+    //borderBottom: 'dashed',
+    backgroundColor: '#6E2C31',
+    color: 'white',
 }
   
 

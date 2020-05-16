@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
 `;
 
-const testState = [];
+const testState = [{id: 0, text: 'test', checked: true}];
 
 const tasksReducer = (state, action) => {
     switch (action.type) {
