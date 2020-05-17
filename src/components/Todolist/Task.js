@@ -11,13 +11,30 @@ const Wrapper = styled.div`
 const TaskElement = styled.div`
     background-color: transparent;
     border: none;
+    font-family: 'Ubuntu', sans-serif;
 `
 
 const TaskTextBox = styled(TaskElement)`
     flex-grow: 1; 
+    min-width: 10px;
+    background-color: #d4d4d4;
+    font-size: 1.1em;
+
+    :disabled {
+        color: initial;
+        background-color: #fafafa;
+    }
 `;
 
 const TaskButton = styled(TaskElement)`
+    background-color: #666666;
+    color: white;
+    font-stretch: condensed; 
+    border-radius: 0;
+`;
+
+const TaskCheckBox = styled.input`
+    margin: 10px;
 `;
 
 const Task = props => {
@@ -74,7 +91,7 @@ const Task = props => {
     
     return (
         <Wrapper>
-            <input type="checkbox" checked={props.checked} onChange={handleCheck} />
+            <TaskCheckBox type="checkbox" checked={props.checked} onChange={handleCheck} />
             <TaskTextBox as="input" value={value} onChange={onChangeHandler} disabled={editDisabled} ref={textRef} onBlur={() => handleEdit()} onKeyUp={handleKeyUp} />
             <TaskButton as="button" id="change-task-text" onClick={editBtnHandler}>EDIT</TaskButton>
             <TaskButton as="button" id="delete-task" onClick={handleDelete}>DELETE</TaskButton>

@@ -7,6 +7,27 @@ const Wrapper = styled.div`
     background-color: #d4d4d4;
     display: flex;
     height: 2.25em;
+    border-bottom: solid 5px #333333;
+`;
+
+const InputBox = styled.input`
+    flex: 1;
+    min-width: 10px;
+    background-color: transparent;
+    border: none;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.2em;
+    font-weight: light;
+    font-style: italic;
+    text-align: center;
+`;
+
+const InputBtn = styled.button`
+    background-color: #666666;
+    border: none;
+    border-radius: 0;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
 `;
 
 const TaskAdder = props => {
@@ -35,22 +56,26 @@ const TaskAdder = props => {
     
     return (
         <Wrapper>
-            <input style={inputStyle} ref={inputRef} placeholder="ENTER A TASK TO BE DONE"></input>
-            <button style={btnStyle} onClick={handleAdd}>ADD</button>
+            <InputBox ref={inputRef} placeholder="ENTER A TASK TO BE DONE" />
+            <InputBtn onClick={handleAdd}>ADD</InputBtn>
         </Wrapper>
     );
-}
+};
 
-const inputStyle = {
-    flex: '1',
-    backgroundColor: 'transparent',
-    border: 'none',
-}
+// const inputStyle = {
+//     flex: '1',
+//     backgroundColor: 'transparent',
+//     border: 'none',
+//     fontSize: '1.25em',
+//     fontWeight: 'light',
+//     fontStyle: 'italic',
+//     textAlign: 'center',
+// }
 
-const btnStyle = {
-    flex: 'none',
-    backgroundColor: 'transparent',
-    border: 'none',
-}
+// const btnStyle = {
+//     flex: 'none',
+//     backgroundColor: 'transparent',
+//     border: 'none',
+// }
 
 export default TaskAdder;

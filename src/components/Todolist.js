@@ -6,7 +6,8 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
 `;
 
-const testState = [{id: 0, text: 'test', checked: true}];
+// const testState = [{id: 0, text: 'test', checked: true}];
+const initialState = [];
 
 const tasksReducer = (state, action) => {
     switch (action.type) {
@@ -37,7 +38,7 @@ const tasksReducer = (state, action) => {
 
 const Todolist = () => {
     
-    const [tasks, dispatch] = useReducer(tasksReducer, testState);
+    const [tasks, dispatch] = useReducer(tasksReducer, initialState);
     
     return (
         <Wrapper>
