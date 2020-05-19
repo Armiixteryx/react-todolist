@@ -1,11 +1,26 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+    text-align: center;
+`;
+
+const Title = styled.h1`
+    font-family: 'Ubuntu Condensed', sans-serif;
+`;
+
+const RepoLink = styled.a`
+    color: initial;
+    text-decoration: underline;
+`;
 
 const Information = () => {
     return (
-        <div>
-            <h1>Lorem Ipsum</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis elit quis ligula sagittis pulvinar. Cras aliquet convallis dolor. Proin at eleifend mauris. Vestibulum placerat augue vel ante congue aliquet. Cras vulputate a odio vel suscipit. Donec eu quam fringilla, aliquam sem at, tincidunt libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-        </div>
+        <Wrapper>
+            <Title>React Todolist Webapp</Title>
+            <p>This is a simple todolist made in React.</p>
+            <p>The code is available in <RepoLink href="https://github.com/Armiixteryx/react-todolist">this repository</RepoLink>.</p>
+        </Wrapper>
     );
 }
 
