@@ -8,39 +8,43 @@ import '../links-styles.css';
 // `
 
 const Title = styled.h1`
-    font-family: 'Ubuntu Condensed', sans-serif;
-    text-align: center;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  text-align: center;
 `;
 
 const NavContainer = styled.nav`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Ubuntu', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Ubuntu', sans-serif;
 `;
 
 const ListItem = styled.li`
-    list-style-type: none;
+  list-style-type: none;
 `;
 
 const Header = () => {
-    return (
-        <header style={headerStyle}>
-            <Title>TODOLIST</Title>
-            <NavContainer>
-                <NavLink exact to="/" activeClassName="link-selected"><ListItem>APP</ListItem></NavLink>
-                <p>&nbsp;&nbsp;|&nbsp;&nbsp;</p>
-                <NavLink class="link" to="/info" activeClassName="link-selected"><ListItem>INFO</ListItem></NavLink>
-            </NavContainer>
-        </header>
-    );
+  return (
+    <header style={headerStyle}>
+      <Title>TODOLIST</Title>
+      <NavContainer>
+        <NavLink exact to="/" activeClassName="link-selected">
+          <ListItem>APP</ListItem>
+        </NavLink>
+        <p>&nbsp;&nbsp;|&nbsp;&nbsp;</p>
+          <NavLink className="link" to="/info" activeClassName="link-selected">
+          <ListItem>INFO</ListItem>
+        </NavLink>
+      </NavContainer>
+    </header>
+  );
 };
 
 const headerStyle = {
-    //borderBottom: 'dashed',
-    //backgroundColor: '#6E2C31',
-    backgroundColor: '#333333',
-    color: 'white',
-} 
+  //borderBottom: 'dashed',
+  //backgroundColor: '#6E2C31',
+  backgroundColor: '#333333',
+  color: 'white',
+};
 
 export default Header;
