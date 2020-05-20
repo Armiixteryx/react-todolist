@@ -1,11 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import '../links-styles.css';
-
-// const Title = styled.header`
-//     font-family: Lobster;
-// `
 
 const Title = styled.h1`
   font-family: 'Ubuntu Condensed', sans-serif;
@@ -19,6 +14,19 @@ const NavContainer = styled.nav`
   font-family: 'Ubuntu', sans-serif;
 `;
 
+const activeClassName = 'link-selected';
+
+const StyledLink = styled(NavLink).attrs({
+  activeClassName
+})`
+  color: white;
+  text-decoration: none;
+
+  &.${activeClassName} {
+    text-decoration: underline;
+  }
+`; 
+
 const ListItem = styled.li`
   list-style-type: none;
 `;
@@ -28,13 +36,13 @@ const Header = () => {
     <header style={headerStyle}>
       <Title>TODOLIST</Title>
       <NavContainer>
-        <NavLink exact to="/" activeClassName="link-selected">
+        <StyledLink exact to="/" activeClassName={activeClassName}>
           <ListItem>APP</ListItem>
-        </NavLink>
+        </StyledLink>
         <p>&nbsp;&nbsp;|&nbsp;&nbsp;</p>
-          <NavLink className="link" to="/info" activeClassName="link-selected">
+          <StyledLink to="/info" activeClassName={activeClassName}>
           <ListItem>INFO</ListItem>
-        </NavLink>
+        </StyledLink>
       </NavContainer>
     </header>
   );
