@@ -17,7 +17,7 @@ const InputBox = styled.input`
   border: none;
   font-family: 'Ubuntu', sans-serif;
   font-size: 1.2em;
-  font-weight: light;
+  font-weight: lighter;
   font-style: italic;
   text-align: center;
 `;

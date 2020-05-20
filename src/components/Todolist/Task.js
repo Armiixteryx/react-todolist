@@ -18,12 +18,23 @@ const TaskTextBox = styled(TaskElement)`
   flex-grow: 1;
   min-width: 10px;
   background-color: #d4d4d4;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 1.1em;
 
+  :enabled {
+    color: ${props => props.checked ? 'black' : 'inherit'};
+    text-decoration: ${props => props.checked ? 'none' : 'inherit'};
+    font-style: ${props => props.checked ? 'normal' : 'inherit'};
+  }
+
   :disabled {
-    color: initial;
+    /* color: initial; */
     background-color: #fafafa;
   }
+
+  text-decoration: ${props => props.checked ? 'line-through' : 'none'};
+  font-style: ${props => props.checked ? 'italic' : 'normal'};
+  color: ${props => props.checked ? '#757575' : 'black'};
 `;
 
 const TaskButton = styled(TaskElement)`
@@ -97,6 +108,7 @@ const Task = (props) => {
       />
       <TaskTextBox
         as="input"
+        checked={props.checked}
         value={value}
         onChange={onChangeHandler}
         disabled={editDisabled}
