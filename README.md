@@ -7,5 +7,6 @@ The app has the following capabilities:
 - [x] Edit tasks.
 - [x] Delete tasks.
 - [x] Check tasks as completed.
+- [x] Remember your tasks.
 
 [See in action](https://react-todolist.armiixteryx.now.sh/)
