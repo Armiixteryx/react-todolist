@@ -5,10 +5,11 @@ import Todolist from './components/Todolist';
 import { Route, Switch } from 'react-router-dom';
 import Error from './Error';
 import tasksReducer from './components/tasksReducer';
-import { getStoredState } from './components/localStorage';
+// import { getStoredState } from './components/localStorage';
 
 // const testState = [{id: 0, text: 'test', checked: true}];
-const initialState = getStoredState() || [];
+// const initialState = getStoredState() || [];
+const initialState = []
 
 function App() {
   const [tasks, dispatch] = useReducer(tasksReducer, initialState);

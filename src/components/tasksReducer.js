@@ -1,15 +1,15 @@
-import { setStoredState } from './localStorage';
+// import { setStoredState } from './localStorage';
 
 export default (state, action) => {
   switch (action.type) {
     case 'ADD': {
       let newState = [...state, action.newTodo];
-      setStoredState(newState);
+      // setStoredState(newState);
       return newState;
     }
     case 'DELETE': {
       let newState = state.filter(todo => todo.id !== action.id);
-      setStoredState(newState);
+      // setStoredState(newState);
       return newState;
     }
     case 'EDIT': {
@@ -20,7 +20,7 @@ export default (state, action) => {
           return todo;
         }
       });
-      setStoredState(newState);
+      // setStoredState(newState);
       return newState;
     }
     case 'CHECKER': {
@@ -31,7 +31,7 @@ export default (state, action) => {
           return todo;
         }
       });
-      setStoredState(newState);
+      // setStoredState(newState);
       return newState;
     }
     default:
