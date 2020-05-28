@@ -34,6 +34,9 @@ export default (state, action) => {
       // setStoredState(newState);
       return newState;
     }
+    case 'SET_ALL': {
+      return action.set; 
+    }
     default:
       return state;
   }

@@ -1,4 +1,4 @@
-import React, {useReducer} from 'react';
+import React, {useReducer, useEffect} from 'react';
 import Header from './components/Header';
 import Information from './components/Information';
 import Todolist from './components/Todolist';
@@ -9,10 +9,20 @@ import tasksReducer from './components/tasksReducer';
 
 // const testState = [{id: 0, text: 'test', checked: true}];
 // const initialState = getStoredState() || [];
-const initialState = []
+const BACKEND = "http://localhost:5000";
+const initialState = [];
 
 function App() {
   const [tasks, dispatch] = useReducer(tasksReducer, initialState);
+
+  useEffect(() => {
+    fetch(BACKEND)
+      .then(res => res.json())
+      .then(data => dispatch({
+        type: 'SET_ALL',
+        set: data
+      }));
+  }, [])
 
   return (
     <div className="App">
