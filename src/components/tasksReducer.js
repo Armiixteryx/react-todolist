@@ -1,7 +1,7 @@
 // import { setStoredState } from './localStorage';
 import { addTodo, delTodo, editTodo } from './sync';
 
-const URL_BACKEND = 'http://localhost:5000';
+// const URL_BACKEND = 'http://localhost:5000';
 
 export default (state, action) => {
   console.log('REDUCER CALLED');

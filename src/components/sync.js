@@ -1,4 +1,4 @@
-const BACKEND = process.env.BACKEND_LOCATION;
+const BACKEND = process.env.REACT_APP_BACKEND_LOCATION;
 
 export const addTodo = (todo) => {
   fetch(BACKEND, {
