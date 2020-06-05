@@ -9,7 +9,7 @@ import tasksReducer from './components/tasksReducer';
 
 // const testState = [{id: 0, text: 'test', checked: true}];
 // const initialState = getStoredState() || [];
-const BACKEND = "http://localhost:5000";
+const BACKEND = process.env.BACKEND_URL;
 const initialState = [];
 
 function App() {
