@@ -15,6 +15,7 @@ const initialState = [];
 function App() {
   const [tasks, dispatch] = useReducer(tasksReducer, initialState);
 
+  //This fills the tasks from the backend
   useEffect(() => {
     fetch(BACKEND)
       .then(res => res.json())
