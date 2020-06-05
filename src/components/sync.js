@@ -1,4 +1,4 @@
-const BACKEND = 'http://localhost:5000';
+const BACKEND = process.env.BACKEND_LOCATION;
 
 export const addTodo = (todo) => {
   fetch(BACKEND, {
